@@ -10,10 +10,10 @@ export class DatabaseService implements OnModuleInit, OnModuleDestroy {
 
     async onModuleInit() {
         this.pool = mysql.createPool({
-            host: process.env.DB_HOST || 'mysql-2b09c391-gbox-cfc6.h.aivencloud.com',
+            host: process.env.DB_HOST || '',
             port: +(process.env.DB_PORT || 20203),
             user: process.env.DB_USER || 'avnadmin',
-            password: process.env.DB_PASSWORD || 'AVNS_pYoLcZrjnz3CTKDKXFN',
+            password: process.env.DB_PASSWORD || '',
             database: process.env.DB_NAME || 'defaultdb',
             waitForConnections: true,
             connectionLimit: 10,
