@@ -10,7 +10,7 @@ async function bootstrap() {
   app.enableCors();
 
 
-  app.getHttpAdapter().get('/', (req, res) => res.send({ message: 'Server Running Successfully!' }));
+  app.getHttpAdapter().get('/', (req, res) => res.send({ message: 'This is Dy' }));
 
   await app.listen(port, '0.0.0.0');
   console.log(`Server listening on http://localhost:${port}`);
